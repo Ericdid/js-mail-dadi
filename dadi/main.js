@@ -1,15 +1,26 @@
 // lanciamo due dadi a 6 facce
 
-function player1() {
-  return 1 + Math.floor(Math.random() * 12);
+const userDice = Math.floor(Math.random() * 12) + 1;
+
+// // il computer lancia due dadi a 6 facce
+
+const computerDice = Math.floor(Math.random() * 12) + 1;
+
+console.log(userDice);
+console.log(computerDice);
+
+// SE il giocatore vince
+
+if (userDice > computerDice) {
+  alert("ha vinto il giocatore");
 }
 
-console.log(player1());
-
-// il computer lancia due dadi a 6 facce
-
-function player2() {
-  return 1 + Math.floor(Math.random() * 12);
+// ALTRIMENTI SE vince il computer
+else if (computerDice > userDice) {
+  alert("ha vinto il computer");
 }
 
-console.log(player2());
+// ALTRIMENTI
+else {
+  alert("pareggio");
+}
